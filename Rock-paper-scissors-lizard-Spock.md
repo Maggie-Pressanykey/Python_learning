@@ -105,5 +105,4 @@ Then write an if/elif/else statement whose conditions test the various possible 
         rpsls("lizard")  
         rpsls("scissors")  
 
-
-
+To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_W01ELGBntlEwpOh.py
