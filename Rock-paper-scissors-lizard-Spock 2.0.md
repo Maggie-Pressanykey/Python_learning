@@ -1,7 +1,7 @@
 This is my first project during class An Introduction to Interactive Programming in Python (Part 1)
 from Courcera.org.  
 ===================================================================================================
-Rock-paper-scissors-lizard-Spock game. (not interactive though)
+Rock-paper-scissors-lizard-Spock game 2.0.
 ---------------------------------------------------------------------------------------------------
 
 In our first mini-project, we will build a Python function rpsls(name) that takes as input the string name,
@@ -106,3 +106,96 @@ Then write an if/elif/else statement whose conditions test the various possible 
         rpsls("scissors")  
 
 To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_W01ELGBntlEwpOh.py
+
+## During Week 2 I made some changes to the code to make the game RPSLS interactive - YEAH!!))) ##
+
+>Challenge: Add an interactive user interface for your implementation of "Rock-paper-scissors-lizard-Spock". Create an input field that takes a player's guess, generates a random computer guess, and prints out the player and computer choices as well as who won in the console. Make sure that your program checks for and correctly responds to bad input. 
+Despite the task was to build an input field, i decided to add the buttons - cos printing every time is not fun at all. So, enjoy)
+
+## My Project code: ##
+    #GUI-based version of RPSLS
+    import simplegui
+    import random
+    #Insert your solution for RPSLS here
+    
+    def name_to_number(name):
+      if name == 'rock':
+        return 0
+      elif name == 'Spock':
+        return 1
+      elif name == 'paper':
+        return 2
+      elif name == 'lizard':
+        return 3
+      elif name == 'scissors':
+        return 4
+      else:
+        print "Error: invalid name"  
+    
+    def number_to_name(number):
+      if number == 0:
+        return 'rock'
+      elif number == 1:
+        return 'Spock' 
+      elif number == 2:
+        return 'paper'
+      elif number == 3:
+        return 'lizard'
+      elif number == 4:
+        return 'scissors'
+      else:
+        print "Error: invalid number" 
+    
+    def rpsls(guess): 
+      print "\n"
+      print "Player chooses " + str(guess)
+      name = guess
+      player_number = name_to_number(name)
+    
+      comp_number = random.randrange(0,5)
+      number = comp_number
+      comp_choice = number_to_name(number)
+      print "Computer chooses " + str(comp_choice)
+    
+    win_number = (player_number - comp_number) % 5
+    if win_number == 0:
+        print "Player and computer tie!" + "/n"
+    elif win_number >=3:
+        print "Computer wins!" + "/n"
+    elif win_number <=2:
+        print "Player wins!" + "/n"  
+        
+    # handler for buttons
+    def rock():
+      guess = "rock"
+      rpsls(guess)
+      
+    def paper():
+      guess = "paper"
+      rpsls(guess)
+    
+    def scissors():
+      guess = "scissors"
+      rpsls(guess)
+    
+    def lizard():
+      guess = "lizard"
+      rpsls(guess)
+    
+    def Spock():
+      guess = "Spock"
+      rpsls(guess)
+    
+    #Create frame and assign callbacks to event handlers
+    frame = simplegui.create_frame("GUI-based RPSLS", 200, 200)
+    frame.add_button("rock", rock, 200)
+    frame.add_button("paper", paper, 200)
+    frame.add_button("scissors", scissors, 200)
+    frame.add_button("lizard", lizard, 200)
+    frame.add_button("Spock", Spock, 200)
+    
+    #Start the frame animation
+    frame.start()
+    
+## PLAY GAME ##
+To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_TOIrd8Zkc3_1.py
