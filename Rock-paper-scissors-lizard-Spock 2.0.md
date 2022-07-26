@@ -160,11 +160,11 @@ Despite the task was to build an input field, i decided to add the buttons - cos
     
     win_number = (player_number - comp_number) % 5
     if win_number == 0:
-        print "Player and computer tie!" + "/n"
+        print "Player and computer tie!" + "\n"
     elif win_number >=3:
-        print "Computer wins!" + "/n"
+        print "Computer wins!" + "\n"
     elif win_number <=2:
-        print "Player wins!" + "/n"  
+        print "Player wins!" + "\n"  
         
     # handler for buttons
     def rock():
@@ -199,4 +199,4 @@ Despite the task was to build an input field, i decided to add the buttons - cos
     frame.start()
     
 ## PLAY GAME ##
-To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_TOIrd8Zkc3_1.py
+To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_TOIrd8Zkc3_2.py
