@@ -107,9 +107,10 @@ Then write an if/elif/else statement whose conditions test the various possible 
 
 To check my program in the Code Sculptor, use this URL https://py2.codeskulptor.org/#user49_W01ELGBntlEwpOh.py
 
-## During Week 2 I made some changes to the code to make the game RPSLS interactive - YEAH!!))) ##
+## During Week 2 I have made some changes to the code to make the game RPSLS interactive - YEAH!!))) ##
 
 >Challenge: Add an interactive user interface for your implementation of "Rock-paper-scissors-lizard-Spock". Create an input field that takes a player's guess, generates a random computer guess, and prints out the player and computer choices as well as who won in the console. Make sure that your program checks for and correctly responds to bad input. 
+
 Despite the task was to build an input field, i decided to add the buttons - cos printing every time is not fun at all. So, enjoy)
 
 ## My Project code: ##
